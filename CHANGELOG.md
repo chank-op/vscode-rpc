@@ -1,5 +1,15 @@
 # Change Log
 
+## v0.0.4
+
+Added configurable RPC options:
+
+- `vscodeRpc.showActivityStatus` — show **Coding** or **Idle** status in Discord (default: `true`)
+- `vscodeRpc.showRepository` — show current repository name in Discord (default: `true`)
+- `vscodeRpc.showRepositoryButton` — show a **View Repository** button that opens the repo in the browser (default: `true`)
+
+Activity status now updates instantly when settings change. Idle state now shows "Not in a file!" as the details line.
+
 ## v0.0.3
 
 Extension now detects the current file as soon as it starts and updates the activity status accordingly.

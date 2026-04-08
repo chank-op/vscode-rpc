@@ -2,13 +2,13 @@
   "name": "vsc-discord-rpc",
   "displayName": "Discord RPC",
   "description": "A simple no-config Discord RPC extension",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "icon": "icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chakornk/vscode-rpc"
+    "url": "https://github.com/chank-op/vscode-rpc"
   },
-  "publisher": "ChakornK",
+  "publisher": "Chank-op",
   "license": "MIT",
   "main": "./dist/extension.js",
   "engines": {
@@ -33,15 +33,37 @@
     "color": "#5865F2",
     "theme": "dark"
   },
+  "contributes": {
+    "configuration": {
+      "title": "Discord RPC",
+      "properties": {
+        "vscodeRpc.showActivityStatus": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show activity status (Coding/Idle) in Discord Rich Presence"
+        },
+        "vscodeRpc.showRepository": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show the current repository name in Discord Rich Presence"
+        },
+        "vscodeRpc.showRepositoryButton": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show a 'View Repository' button in Discord Rich Presence"
+        }
+      }
+    }
+  },
   "activationEvents": [
     "onStartupFinished"
   ],
   "scripts": {
-    "vscode:prepublish": "yarn run build",
+    "vscode:prepublish": "npm run build",
     "watch": "npm-run-all -p watch:*",
     "watch:esbuild": "node esbuild.js --watch",
     "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
-    "build": "yarn run check-types && node esbuild.js --production",
+    "build": "npm run check-types && node esbuild.js --production",
     "package": "vsce package --no-yarn",
     "deploy": "vsce publish --no-yarn",
     "check-types": "tsc --noEmit",

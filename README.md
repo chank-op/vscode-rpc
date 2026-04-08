@@ -5,12 +5,24 @@
     VSCode Discord Rich Presence
   </p>
 </h1>
-<p align="center">A simple no-config Discord RPC extension</p>
+<p align="center">A simple Discord RPC extension for VSCode</p>
+<p align="center">Fork of <a href="https://github.com/ChakornK/vscode-rpc">vscode-rpc</a> by <a href="https://github.com/ChakornK">ChakornK</a> · maintained by <a href="https://github.com/chank-op">chank-op</a></p>
 
 ## ✨ Features
 
 - Displays your current file name and cursor position (`:ln:col`)
+- Shows activity status: **Coding** when editing, **Idle** when not in a file
+- Displays current repository name in your status
+- Adds a **View Repository** button that opens your repo in the browser
 - Simple monochrome-style icons
+
+## ⚙️ Configuration
+
+| Setting | Default | Description |
+|---|---|---|
+| `vscodeRpc.showActivityStatus` | `true` | Show Coding/Idle status in Discord |
+| `vscodeRpc.showRepository` | `true` | Show current repository name in Discord |
+| `vscodeRpc.showRepositoryButton` | `true` | Show a "View Repository" button in Discord |
 
 ## 🪄 Preview
 
